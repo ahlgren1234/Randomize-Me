@@ -11,7 +11,9 @@ import SwiftUI
 struct Randomize_MeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                Home()
+            }
         }
     }
 }
