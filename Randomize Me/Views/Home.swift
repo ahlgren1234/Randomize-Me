@@ -16,7 +16,7 @@ struct Home: View {
         private let colors: [Color] = [.red, .green, .blue, .yellow]
     
         private let adaptiveColumns = [
-            GridItem(.adaptive(minimum: 170))
+            GridItem(.adaptive(minimum: 150))
         ]
     
     var body: some View {
@@ -29,7 +29,7 @@ struct Home: View {
                 //
                 ZStack {
                     Rectangle()
-                        .frame(width: 170, height: 170)
+                        .frame(width: 150, height: 150)
                         .foregroundColor(colors[0])
                         .cornerRadius(20)
                     
@@ -52,7 +52,7 @@ struct Home: View {
                 //
                 ZStack {
                     Rectangle()
-                        .frame(width: 170, height: 170)
+                        .frame(width: 150, height: 150)
                         .foregroundColor(colors[1])
                         .cornerRadius(20)
                     
@@ -75,7 +75,7 @@ struct Home: View {
                 //
                 ZStack {
                     Rectangle()
-                        .frame(width: 170, height: 170)
+                        .frame(width: 150, height: 150)
                         .foregroundColor(colors[2])
                         .cornerRadius(20)
                     
@@ -98,7 +98,7 @@ struct Home: View {
                 //
                 ZStack {
                     Rectangle()
-                        .frame(width: 170, height: 170)
+                        .frame(width: 150, height: 150)
                         .foregroundColor(colors[3])
                         .cornerRadius(20)
                     
@@ -121,7 +121,7 @@ struct Home: View {
                 //
                 ZStack {
                     Rectangle()
-                        .frame(width: 170, height: 170)
+                        .frame(width: 150, height: 150)
                         .foregroundColor(colors[0])
                         .cornerRadius(20)
                     
@@ -144,7 +144,7 @@ struct Home: View {
                 //
                 ZStack {
                     Rectangle()
-                        .frame(width: 170, height: 170)
+                        .frame(width: 150, height: 150)
                         .foregroundColor(colors[1])
                         .cornerRadius(20)
                     
@@ -167,7 +167,7 @@ struct Home: View {
                 //
                 ZStack {
                     Rectangle()
-                        .frame(width: 170, height: 170)
+                        .frame(width: 150, height: 150)
                         .foregroundColor(colors[2])
                         .cornerRadius(20)
                     
@@ -190,7 +190,7 @@ struct Home: View {
                 //
                 ZStack {
                     Rectangle()
-                        .frame(width: 170, height: 170)
+                        .frame(width: 150, height: 150)
                         .foregroundColor(colors[3])
                         .cornerRadius(20)
                     
@@ -201,9 +201,12 @@ struct Home: View {
                                 .font(.system(size: 48))
                                 .padding(.bottom)
                                 
-                            Text("Rock, Paper, Scissors")
+                            Text("Rock, Paper,")
                                 .foregroundColor(.white)
-                                .font(.system(size: 20, weight: .medium, design: .rounded))
+                                .font(.system(size: 16, weight: .medium, design: .rounded))
+                            Text("Scissors")
+                                .foregroundColor(.white)
+                                .font(.system(size: 16, weight: .medium, design: .rounded))
                         } //: VSTACK
                     } //: NAVIGATIONLINK
                 } //: ZSTACK

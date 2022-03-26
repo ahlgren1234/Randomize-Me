@@ -31,6 +31,12 @@ struct NumbersView: View {
     var body: some View {
         
         VStack  {
+            Text("Numbers")
+                .font(.system(size: 20, weight: .bold, design: .rounded))
+                .foregroundColor(.accentColor)
+            
+            Divider()
+            
             ScrollView {
                 LazyVGrid(columns: adaptiveColumns, spacing: 20) {
                     
@@ -50,7 +56,7 @@ struct NumbersView: View {
                     }
                         
                 }//: LAZYVGRID
-            }
+            } //: SCROLLVIEW
             
             VStack {
                 
