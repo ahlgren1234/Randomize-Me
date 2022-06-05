@@ -27,6 +27,8 @@ struct SettingsView: View {
     
     @State private var showSafari: Bool = false
     
+    let appStoreURLStringForShareSheet = "https://apps.apple.com/us/app/id1627982178"
+    
     var body: some View {
         VStack {
             List {
@@ -69,6 +71,9 @@ struct SettingsView: View {
                                 .font(.system(size: 13, weight: .regular, design: .rounded))
                         } //: VSTACK
                     } //: HSTACK
+                    .onTapGesture {
+                        launchShareSheet()
+                    }
                     HStack {
                         Image (systemName: "envelope")
                         VStack (alignment: .leading) {
@@ -82,12 +87,19 @@ struct SettingsView: View {
                 } //: SECTION
                 
             } //: LIST
-            
-            
-            
+
         } //: VSTACK
     }
+    
+    func launchShareSheet() {
+        guard let urlShare = URL(string: appStoreURLStringForShareSheet) else { return }
+        let activityVC = UIActivityViewController(activityItems: [urlShare], applicationActivities: nil)
+        UIApplication.shared.windows.first?.rootViewController?.present(activityVC, animated: true, completion: nil)
+    }
+    
 }
+
+
 
 
 
