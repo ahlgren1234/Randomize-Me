@@ -9,10 +9,14 @@ import SwiftUI
 
 @main
 struct Randomize_MeApp: App {
+    
+    @AppStorage("isDarkMode") private var isDarkMode = false
+    
     var body: some Scene {
         WindowGroup {
             NavigationView {
                 Home()
+                    .preferredColorScheme(isDarkMode ? .dark : .light)
             }
         }
     }

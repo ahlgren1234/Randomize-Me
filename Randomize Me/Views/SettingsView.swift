@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct SettingsView: View {
+    
+    @AppStorage("isDarkMode") private var isDarkMode = false
+    
     var body: some View {
-        Text("Settings View")
+        VStack {
+            List {
+                Text("Appearance:")
+                HStack {
+                    Toggle("Dark Mode", isOn: $isDarkMode)
+                } //: HSTACK
+            } //: LIST
+        } //: VSTACK
     }
 }
 
