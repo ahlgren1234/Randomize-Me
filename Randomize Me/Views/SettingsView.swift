@@ -29,6 +29,11 @@ struct SettingsView: View {
     
     let appStoreURLStringForShareSheet = "https://apps.apple.com/us/app/id1627982178"
     
+    @Environment(\.openURL) var openURL
+    @State private var askForAttachment = false
+    @State private var showEmail = false
+    @State private var email = SupportEmail(toAddress: "peter@peterahlgren.com", subject: "Support Email", messageHeader: "Please describe your issue below")
+    
     var body: some View {
         VStack {
             List {
@@ -82,11 +87,49 @@ struct SettingsView: View {
                                 .font(.system(size: 13, weight: .regular, design: .rounded))
                         } //: VSTACK
                     } //: HSTACK
+                    .onTapGesture {
+                        email.send(openURL: openURL)
+                    }
                 } header: {
                     Text("Rating and sharing")
                 } //: SECTION
                 
             } //: LIST
+            .sheet(isPresented: $showEmail) {
+                MailView(supportEmail: $email) { result in
+                    switch result {
+                    case .success:
+                        print("Email sent")
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                    }
+                }
+            }
+            .confirmationDialog("", isPresented: $askForAttachment) {
+                Button("Yes") {
+                    email.data = ExampleData.data
+                    if email.data == nil {
+                        email.send(openURL: openURL)
+                    } else {
+                        if MailView.canSendMail {
+                            // showEmail.toggle()
+                        } else {
+                            print("""
+                            This device does not support email
+                            \(email.body)
+                            """)
+                        }
+                    }
+                }
+                Button("No") {
+                    email.send(openURL: openURL)
+                }
+            } message: {
+                Text("""
+                SUPPORT EMAIL
+                Include data as an attachment?
+                """)
+            }
 
         } //: VSTACK
     }

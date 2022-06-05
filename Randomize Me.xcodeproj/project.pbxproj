@@ -24,6 +24,12 @@
 		D0AAD6EF27F04D44006005F3 /* dice.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AAD6EE27F04D44006005F3 /* dice.png */; };
 		D0D75F38284CB9F600C0D7D9 /* ReviewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D75F37284CB9F600C0D7D9 /* ReviewHandler.swift */; };
 		D0D75F3A284CBCA000C0D7D9 /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D75F39284CBCA000C0D7D9 /* UserDefaultsKeys.swift */; };
+		D0D75F3D284CD90D00C0D7D9 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D75F3C284CD90D00C0D7D9 /* Bundle+Extension.swift */; };
+		D0D75F3F284CD93B00C0D7D9 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D75F3E284CD93B00C0D7D9 /* UIDevice+Extension.swift */; };
+		D0D75F42284CD96B00C0D7D9 /* ExampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D75F41284CD96B00C0D7D9 /* ExampleData.swift */; };
+		D0D75F44284CD98C00C0D7D9 /* SupportEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D75F43284CD98C00C0D7D9 /* SupportEmail.swift */; };
+		D0D75F47284CD9D100C0D7D9 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D75F46284CD9D100C0D7D9 /* MailView.swift */; };
+		D0D75F49284CDA5C00C0D7D9 /* DeviceModels.json in Resources */ = {isa = PBXBuildFile; fileRef = D0D75F48284CDA5C00C0D7D9 /* DeviceModels.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +51,12 @@
 		D0AAD6EE27F04D44006005F3 /* dice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dice.png; sourceTree = "<group>"; };
 		D0D75F37284CB9F600C0D7D9 /* ReviewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewHandler.swift; sourceTree = "<group>"; };
 		D0D75F39284CBCA000C0D7D9 /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
+		D0D75F3C284CD90D00C0D7D9 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
+		D0D75F3E284CD93B00C0D7D9 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
+		D0D75F41284CD96B00C0D7D9 /* ExampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleData.swift; sourceTree = "<group>"; };
+		D0D75F43284CD98C00C0D7D9 /* SupportEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportEmail.swift; sourceTree = "<group>"; };
+		D0D75F46284CD9D100C0D7D9 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
+		D0D75F48284CDA5C00C0D7D9 /* DeviceModels.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DeviceModels.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +89,9 @@
 		D02C4A5827C67DF400CBCE49 /* Randomize Me */ = {
 			isa = PBXGroup;
 			children = (
+				D0D75F45284CD9B200C0D7D9 /* UIViewControllerRepresentables */,
+				D0D75F40284CD95800C0D7D9 /* Models */,
+				D0D75F3B284CD8F800C0D7D9 /* Extensions */,
 				D0AAD6EE27F04D44006005F3 /* dice.png */,
 				D043427427CBA463006604FD /* Views */,
 				D02C4A5927C67DF400CBCE49 /* Randomize_MeApp.swift */,
@@ -84,6 +99,7 @@
 				D02C4A5D27C67DF500CBCE49 /* Assets.xcassets */,
 				D02C4A5F27C67DF500CBCE49 /* Preview Content */,
 				D0D75F39284CBCA000C0D7D9 /* UserDefaultsKeys.swift */,
+				D0D75F48284CDA5C00C0D7D9 /* DeviceModels.json */,
 			);
 			path = "Randomize Me";
 			sourceTree = "<group>";
@@ -112,6 +128,32 @@
 				D01D4F1B27CCCFAD000B0FC6 /* DicesView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		D0D75F3B284CD8F800C0D7D9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D0D75F3C284CD90D00C0D7D9 /* Bundle+Extension.swift */,
+				D0D75F3E284CD93B00C0D7D9 /* UIDevice+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D0D75F40284CD95800C0D7D9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D0D75F41284CD96B00C0D7D9 /* ExampleData.swift */,
+				D0D75F43284CD98C00C0D7D9 /* SupportEmail.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D0D75F45284CD9B200C0D7D9 /* UIViewControllerRepresentables */ = {
+			isa = PBXGroup;
+			children = (
+				D0D75F46284CD9D100C0D7D9 /* MailView.swift */,
+			);
+			path = UIViewControllerRepresentables;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +218,7 @@
 				D0AAD6ED27F04D20006005F3 /* Launch Screen.storyboard in Resources */,
 				D02C4A6127C67DF500CBCE49 /* Preview Assets.xcassets in Resources */,
 				D02C4A5E27C67DF500CBCE49 /* Assets.xcassets in Resources */,
+				D0D75F49284CDA5C00C0D7D9 /* DeviceModels.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,17 +230,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				D01D4F1827CCCF59000B0FC6 /* CardsView.swift in Sources */,
+				D0D75F3D284CD90D00C0D7D9 /* Bundle+Extension.swift in Sources */,
+				D0D75F42284CD96B00C0D7D9 /* ExampleData.swift in Sources */,
 				D01D4F1C27CCCFAD000B0FC6 /* DicesView.swift in Sources */,
 				D0D75F3A284CBCA000C0D7D9 /* UserDefaultsKeys.swift in Sources */,
 				D0D75F38284CB9F600C0D7D9 /* ReviewHandler.swift in Sources */,
 				D01D4F2427CCD02C000B0FC6 /* LettersView.swift in Sources */,
+				D0D75F47284CD9D100C0D7D9 /* MailView.swift in Sources */,
 				D01D4F1A27CCCF8D000B0FC6 /* RockPaperScissorsView.swift in Sources */,
 				D01D4F2227CCD018000B0FC6 /* HeadOrTailsView.swift in Sources */,
 				D01D4F1E27CCCFC6000B0FC6 /* NumbersView.swift in Sources */,
 				D02C4A5C27C67DF400CBCE49 /* Home.swift in Sources */,
+				D0D75F44284CD98C00C0D7D9 /* SupportEmail.swift in Sources */,
 				D01D4F2027CCCFE1000B0FC6 /* ColorsView.swift in Sources */,
 				D01D4F2627CCD043000B0FC6 /* YesOrNoView.swift in Sources */,
 				D02C4A5A27C67DF400CBCE49 /* Randomize_MeApp.swift in Sources */,
+				D0D75F3F284CD93B00C0D7D9 /* UIDevice+Extension.swift in Sources */,
 				D01D4F2827CCD226000B0FC6 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
