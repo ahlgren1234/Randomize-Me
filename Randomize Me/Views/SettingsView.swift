@@ -58,6 +58,9 @@ struct SettingsView: View {
                                 .font(.system(size: 13, weight: .regular, design: .rounded))
                         } //: VSTACK
                     } //: HSTACK
+                    .onTapGesture {
+                        ReviewHandler.requestReviewManually()
+                    }
                     HStack {
                         Image (systemName: "paperplane")
                         VStack (alignment: .leading) {

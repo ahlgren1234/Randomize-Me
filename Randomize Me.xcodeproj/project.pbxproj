@@ -22,6 +22,8 @@
 		D02C4A6127C67DF500CBCE49 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D02C4A6027C67DF500CBCE49 /* Preview Assets.xcassets */; };
 		D0AAD6ED27F04D20006005F3 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0AAD6EC27F04D20006005F3 /* Launch Screen.storyboard */; };
 		D0AAD6EF27F04D44006005F3 /* dice.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AAD6EE27F04D44006005F3 /* dice.png */; };
+		D0D75F38284CB9F600C0D7D9 /* ReviewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D75F37284CB9F600C0D7D9 /* ReviewHandler.swift */; };
+		D0D75F3A284CBCA000C0D7D9 /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D75F39284CBCA000C0D7D9 /* UserDefaultsKeys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		D02C4A6027C67DF500CBCE49 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D0AAD6EC27F04D20006005F3 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		D0AAD6EE27F04D44006005F3 /* dice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dice.png; sourceTree = "<group>"; };
+		D0D75F37284CB9F600C0D7D9 /* ReviewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewHandler.swift; sourceTree = "<group>"; };
+		D0D75F39284CBCA000C0D7D9 /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +80,10 @@
 				D0AAD6EE27F04D44006005F3 /* dice.png */,
 				D043427427CBA463006604FD /* Views */,
 				D02C4A5927C67DF400CBCE49 /* Randomize_MeApp.swift */,
+				D0D75F37284CB9F600C0D7D9 /* ReviewHandler.swift */,
 				D02C4A5D27C67DF500CBCE49 /* Assets.xcassets */,
 				D02C4A5F27C67DF500CBCE49 /* Preview Content */,
+				D0D75F39284CBCA000C0D7D9 /* UserDefaultsKeys.swift */,
 			);
 			path = "Randomize Me";
 			sourceTree = "<group>";
@@ -182,6 +188,8 @@
 			files = (
 				D01D4F1827CCCF59000B0FC6 /* CardsView.swift in Sources */,
 				D01D4F1C27CCCFAD000B0FC6 /* DicesView.swift in Sources */,
+				D0D75F3A284CBCA000C0D7D9 /* UserDefaultsKeys.swift in Sources */,
+				D0D75F38284CB9F600C0D7D9 /* ReviewHandler.swift in Sources */,
 				D01D4F2427CCD02C000B0FC6 /* LettersView.swift in Sources */,
 				D01D4F1A27CCCF8D000B0FC6 /* RockPaperScissorsView.swift in Sources */,
 				D01D4F2227CCD018000B0FC6 /* HeadOrTailsView.swift in Sources */,

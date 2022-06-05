@@ -221,6 +221,9 @@ struct Home: View {
                 }
             }
         }
+        .onAppear(perform: {
+            ReviewHandler.requestReview()
+        })
         
     }
 }
