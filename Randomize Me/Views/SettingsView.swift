@@ -29,10 +29,14 @@ struct SettingsView: View {
     
     let appStoreURLStringForShareSheet = "https://apps.apple.com/us/app/id1627982178"
     
+    let v = Bundle.main.appVersion
+    
+    
     @Environment(\.openURL) var openURL
     @State private var askForAttachment = false
     @State private var showEmail = false
     @State private var email = SupportEmail(toAddress: "peter@peterahlgren.com", subject: "Support Email", messageHeader: "Please describe your issue below")
+    
     
     var body: some View {
         VStack {
@@ -94,6 +98,26 @@ struct SettingsView: View {
                     Text("Rating and sharing")
                 } //: SECTION
                 
+                Section {
+                    VStack {
+                        Image(systemName: "dice.fill")
+                            .font(.system(size: 48))
+                            .padding()
+                        Text("Randomize Me, version: \(v)")
+                        HStack {
+                            Text("Crafted with ❤️ by")
+                            Text("@peterahlgren")
+                                .onTapGesture {
+                                    showSafari.toggle()
+                                }
+                                .fullScreenCover(isPresented: $showSafari) {
+                                    SFSafariViewWrapper(url: URL(string: "https://twitter.com/peter_ahlgren")!)
+                                }
+                        } //: HSTACK
+                    } //: VSTACK
+                } //: SECTION
+                
+                
             } //: LIST
             .sheet(isPresented: $showEmail) {
                 MailView(supportEmail: $email) { result in
@@ -130,6 +154,8 @@ struct SettingsView: View {
                 Include data as an attachment?
                 """)
             }
+            
+            
 
         } //: VSTACK
     }

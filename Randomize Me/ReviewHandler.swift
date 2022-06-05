@@ -22,7 +22,7 @@ class ReviewHandler {
         
         let lastVersionPromptedForReview = UserDefaults.standard.string(forKey: UserDefaultKeys.lastVersionPromptedForReviewKey)
         
-        if count >= 4 && currentVersion != lastVersionPromptedForReview {
+        if count >= 8 && currentVersion != lastVersionPromptedForReview {
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2.0) {
                 if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
                     SKStoreReviewController.requestReview(in: scene)
